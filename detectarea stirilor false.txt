@@ -1,0 +1,28 @@
+1. Sa se afle data la care s-a scris articolul/ prima data si ultima data. Deci intervalul de timp daca articolul este mai vechi si a fost repostat sau data cand a fost postat daca este postare unica
+
+Inf:
+https://www.makeuseof.com/tag/find-date-published-post-insanely-simple-tips/
+https://stackoverflow.com/questions/33771712/find-date-in-generic-webpage-using-python
+
+pip install htmldate
+
+from htmldate import find_date
+find_date('https://stackoverflow.com/questions/33771712/find-date-in-generic-webpage-using-python')
+
+2.Se verifica daca articolul nu este preluat de la o data mai veche >>daca da (-1) nu (+1)
+
+3. Se afla daca articolul are autor >> daca da (+1) daca nu (-1)
+
+4. Se verifica daca articolul citeaza lucrari stiintifice cu link complet de ex nu doar www.nasa.gov, fara sa dea linkul complet catre documentul care face referire >>daca da(+1) daca nu (-1)
+
+5.Se verifica ortografia textului >> daca are greseli (-1) daca nu (+1)
+
+6.Se verifica sentimentul articolului daca e de panica (-1) daca e informativ (+1)
+
+7. Se verifica daca articolul se afla in baza de date gdelt >> daca da (+3) daca nu (-3)
+
+8. se verifica titlul stirii cu siturile de verificare "Fact Check" daca se gaseste cu eticheta fals (-3) daca nu se gaseste (+3)
+
+Atentie: 7 si 8 totdeuna se vor putea folosi cam dupa 2 3 zile dupa aparitia stirii in cazul postarii unice la acea data. 
+
+Daca scorul este peste 9 articolul este 90% un articol corect, dar inca mai poate fi un articol de influienta pentru acesta este necesar o metoda mai complicata de analiza, cum ar fi un fel de analiza a situatiei>> pentru acesta se va face un program de apel grafic pe baza de date a stirilor gdelt.(necesita analiza umana desi este interactiv)

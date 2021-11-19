@@ -1,0 +1,1 @@
+start https://chrome.google.com/webstore/detail/fake-video-news-debunker/mhccpoafgdgbhnjfhkcmgknndkeenfhe?hl=en

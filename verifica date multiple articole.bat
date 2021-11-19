@@ -1,0 +1,1 @@
+htmldate --fast -i logs.txt>listadate.txt
